@@ -16,6 +16,8 @@ library(coda)
 
 #### Data requirements  ####----
 
+# Data is available on Enlighten under  http://dx.doi.org/10.5525/gla.researchdata.1286
+
 # Pd: matrix of colony census data for each colony (columns) and year (rows) of the time series, for forecasting add empty 
 # rows 
 # harvest: matrix with harvest information or colonies and years of time series, expressed as 0 = no harvest, 1 = harvest
