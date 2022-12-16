@@ -68,15 +68,15 @@ for(n in 1:N)
     
     R[n,t]<-r[n,t]*((1-aI)*y[n,t]+aI*ytot[t]*W[n,t])                    # state: number of recruits at colony n in year t
     
-    lambda[n,t]<-sa*P[n,t]+R[n,t]                                       # growth rate based on adult and juvenile survival, recruitment and immigration
+    lambda[n,t]<-sa*P[n,t]+R[n,t]                                       # expected colony size based on adult and juvenile survival, recruitment and immigration
 
-    #P[n,t+1]~dpois(lambda[n,t])                                        # Switch 3: poisson form of growth model
-    P[n,t+1]~dpois(lambda[n,t] * h[n,t])                                # Switch 3: negative binomial form of growth model
-    h[n,t] ~ dgamma(theta,theta)                                        # Switch 3: required for negative binomial
+    #P[n,t+1]~dpois(lambda[n,t])                                        # Switch 3: Poisson form of growth model
+    P[n,t+1]~dpois(lambda[n,t] * h[n,t])                                # Switch 3: negative binomial (gamma Poisson) form of growth model
+    h[n,t] ~ dgamma(theta,theta)                                        # Switch 3: required for gamma Pooissin implementation of negative binomial
     
     
     ### OBSERVATION MODEL ###
-    Pd[n,t+1]~dnorm(P[n,t+1],1/(0.05*P[n,t+1]+1)^2)                     # Accounting for 10 % observation error in census data
+    Pd[n,t+1]~dnorm(P[n,t+1],1/(0.05*P[n,t+1]+1)^2)                     # Accounting for 5 % CV in observation error in census data
     
   }
 }
