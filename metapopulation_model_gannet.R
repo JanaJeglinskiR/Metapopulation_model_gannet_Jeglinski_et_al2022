@@ -36,7 +36,7 @@ library(coda)
 #
 # We investigate 5 different regulatory scenarios with this model:
 # scenario 1 - closed populations with local density dependence
-# scenario 2: metapopulation with local density dependence and equipartitioning of immmigrants
+# scenario 2: metapopulation with local density dependence and equipartitioning of immigrants
 # scenario 3: metapopulation with local density dependence and conspecific attraction in immigration term
 # scenario 4: metapopulation with local or regional density dependence and equipartitioning of immmigrants
 # scenario 5: metapopulation with local or regional density dependence and conspecific attraction in immigration term
