@@ -6,3 +6,5 @@ Jana W.E. Jeglinski, Sarah Wanless, Stuart Murray, Robert T. Barrett, Arnthor Ga
 Jochen Dierschke, Hallvard Strøm, Svein-Håkon Lorentsen and Jason Matthiopoulos
 
 Metapopulation model JAGS code associated with publication
+
+https://zenodo.org/badge/latestdoi/490231797
