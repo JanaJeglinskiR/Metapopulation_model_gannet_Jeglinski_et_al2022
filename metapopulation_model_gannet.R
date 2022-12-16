@@ -71,7 +71,7 @@ for(n in 1:N)
     lambda[n,t]<-sa*P[n,t]+R[n,t]                                       # expected colony size based on adult and juvenile survival, recruitment and immigration
 
     #P[n,t+1]~dpois(lambda[n,t])                                        # Switch 3: Poisson form of growth model
-    P[n,t+1]~dpois(lambda[n,t] * h[n,t])                                # Switch 3: negative binomial (gamma Poisson) form of growth model
+    P[n,t+1]~dpois(lambda[n,t] * h[n,t])                                # state: colony size (in female gannets) Switch 3: negative binomial (gamma Poisson) form of growth model
     h[n,t] ~ dgamma(theta,theta)                                        # Switch 3: required for gamma Pooissin implementation of negative binomial
     
     
